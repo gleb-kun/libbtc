@@ -41,3 +41,5 @@ libbtc.pc
 *.gcda
 *.gcov
 *.gcno
+cmake-build-*/
+.idea/
