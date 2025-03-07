@@ -877,7 +877,6 @@ enum btc_tx_sign_result btc_tx_sign_input(btc_tx *tx_in_out, const cstring *scri
     unsigned char sigder_plus_hashtype[74+1];
     size_t sigderlen = sizeof(sigder_plus_hashtype);
     btc_ecc_compact_to_der_normalized(sig, sigder_plus_hashtype, &sigderlen);
-    assert(sigderlen <= 74 && sigderlen >= 70);
     sigder_plus_hashtype[sigderlen] = sighashtype;
     sigderlen+=1; //+hashtype
     if (sigcompact_out) {
